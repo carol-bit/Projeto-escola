@@ -1,0 +1,40 @@
+Criação de tabelas no banco (Firebird):
+
+CREATE TABLE cadastro_alunos
+       ( id integer constraint primarykey primary key,
+       serie integer,
+       nome varchar(100),
+       email varchar(100),
+       cpf integer,
+       data date,
+       sexo integer
+       ) ;
+
+CREATE TABLE cadastro_professores
+       ( id integer constraint primaryK primary key,
+       disciplina varchar(100),
+       nome VARCHAR(100),
+       email VARCHAR(100),
+       cpf VARCHAR(11),
+       data DATE,
+       sexo INTEGER
+       ) ;
+
+CREATE TABLE alunos_do_prof
+       ( id integer constraint chave primary key,
+       aluno_id INTEGER,
+       professor_id INTEGER,
+       ano integer,
+       nota_1 float,
+       nota_2 float,
+       nota_3 float,
+       nota_4 float
+       );
+
+Criação de Generators:
+
+CREATE SEQUENCE alunos_do_prof_gen;
+CREATE SEQUENCE cadastro_alunos_gen;
+CREATE SEQUENCE cadastro_professores_gen;
+
+

@@ -1,0 +1,43 @@
+SQL das Querys do form Cadastro Padrão/ CadastroAlunos/ Cadastro Professor
+
+Qry Grid
+
+select * 
+from cadastro_alunos
+
+
+Qry Detalhes
+
+select tt.*
+from cadastro_alunos tt
+where tt.id = :id
+
+Qry Generator
+
+select gen_id(:nome, 1) 
+from RDB$DATABASE;
+
+SQL das Querys do cadastro de alunos do professor:
+
+Qry GetGenerator
+
+select gen_id(:nome, 1) 
+from RDB$DATABASE;
+
+Qry Alunos
+
+select * from
+cadastro_alunos
+
+Qry AlunosProfessorGrid
+
+select tt.*
+from alunos_do_prof tt
+where tt.professor_id = :id
+
+Qry AlunosProfessorDetalhe
+
+select *
+from alunos_do_prof
+where id = :id
+
